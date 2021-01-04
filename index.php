@@ -1,5 +1,5 @@
 <?php
-  require header.php;
+  require  partials/header.php;
 ?>
 
         <!-- page content -->
