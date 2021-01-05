@@ -19,6 +19,11 @@
 <script src="plantilla/vendors/nprogress/nprogress.js"></script>
 <!-- Chart.js -->
 <script src="plantilla/vendors/Chart.js/dist/Chart.min.js"></script>
+<!-- bootstrap-daterangepicker -->
+<script src="plantilla/vendors/moment/min/moment.min.js"></script>
+<script src="plantilla/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+<!-- bootstrap-datetimepicker -->    
+<script src="plantilla/vendors/bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
 <!-- jQuery Sparklines -->
 <script src="plantilla/vendors/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
 <!-- Flot -->
@@ -39,4 +44,38 @@
 
 <!-- Custom Theme Scripts -->
 <script src="plantilla/build/js/custom.min.js"></script>
+
+<!-- Initialize datetimepicker -->
+<script>
+    $('#myDatepicker').datetimepicker();
+    
+    $('#myDatepicker2').datetimepicker({
+        format: 'DD/MM/YYYY'
+    });
+    
+    $('#myDatepicker3').datetimepicker({
+        format: 'hh:mm A'
+    });
+    
+    $('#myDatepicker4').datetimepicker({
+        ignoreReadonly: true,
+        allowInputToggle: true
+    });
+
+    $('#datetimepicker6').datetimepicker();
+    
+    $('#datetimepicker7').datetimepicker({
+        useCurrent: false
+    });
+    
+    $("#datetimepicker6").on("dp.change", function(e) {
+        $('#datetimepicker7').data("DateTimePicker").minDate(e.date);
+    });
+    
+    $("#datetimepicker7").on("dp.change", function(e) {
+        $('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
+    });
+</script>
+
+
 </body>

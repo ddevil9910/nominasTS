@@ -17,7 +17,9 @@
     <link href="plantilla/vendors/nprogress/nprogress.css" rel="stylesheet">
     <!-- bootstrap-daterangepicker -->
     <link href="plantilla/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
-
+    <!-- bootstrap-datetimepicker -->
+    <link href="plantilla/vendors/bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.css" rel="stylesheet">
+    
     <!-- Custom Theme Style -->
     <link href="plantilla/build/css/custom.min.css" rel="stylesheet">
 </head>
