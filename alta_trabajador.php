@@ -63,6 +63,21 @@ require_once  'partials/headers.php';
                          
                         </div>
                       </div>
+
+                      <div class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Fecha de baja</font>*</font></label>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12 ">
+
+                          <div class="input-group date" id="myDatepicker">
+                              <input type="text" class="form-control">
+                              <span class="input-group-addon">
+                                 <span class="glyphicon glyphicon-calendar"></span>
+                              </span>
+                          </div>
+                        </div>
+                      </div>
+
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Puesto <span class="required">*</span>
                         </label>
