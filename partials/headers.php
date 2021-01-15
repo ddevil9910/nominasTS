@@ -22,6 +22,8 @@
     
     <!-- Custom Theme Style -->
     <link href="plantilla/build/css/custom.min.css" rel="stylesheet">
+    <!--estilos personalizados-->
+    <link href="css/estilos.css">
 </head>
 
 <body class="nav-md">

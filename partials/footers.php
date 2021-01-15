@@ -76,6 +76,9 @@
         $('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
     });
 </script>
-
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script src="js/funciones.js"></script>
+<script src="js/validaciones.js"></script>
+<script src="js/alertas.js"></script>
 
 </body>
