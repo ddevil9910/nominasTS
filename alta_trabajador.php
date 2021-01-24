@@ -1,5 +1,5 @@
 <?php
-$page_title = "Alta - Empresa";
+$page_title = "Alta - Trabajador";
 require_once  'partials/headers.php';
 ?>
 <!--contenido de pagina-->
@@ -15,10 +15,10 @@ require_once  'partials/headers.php';
             <div class="row">
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
-                  <div class="x_title">
-                    <h2>Agregar <small>Nuevo Trabajador</small></h2>
-                    <div class="clearfix"></div>
-                  </div>
+                    <div class="text-center">
+                        <h2>Empresa - Nuevo Empleado</h2>
+                        <hr class="divider">
+                    </div>
                   <div class="x_content">
                     <br />
                     <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
@@ -152,6 +152,7 @@ require_once  'partials/headers.php';
                     </form>
                   </div>
                   <!--/contenido de pagina-->
+                    <hr>
                  <?php
                     include_once 'partials/footers.php';
                     ?>

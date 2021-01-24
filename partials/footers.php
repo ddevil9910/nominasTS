@@ -1,12 +1,18 @@
 <!-- footer content -->
+<div class="clearfix"></div>
+<div class="clearfix"></div>
+<hr class=ln_solid">
 <footer>
-    <div class="pull-right">
-        Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+
+    <div class="footer_fixed pull-right">
+
+        Nomina de empleados - Hecho por <a href="javascript:void(0)">...</a>
     </div>
-    <div class="clearfix"></div>
+
 </footer>
 <!-- /footer content -->
 </div>
+
 </div>
 
 <!-- jQuery -->
