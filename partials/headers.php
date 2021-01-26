@@ -68,7 +68,7 @@
                         <ul class="nav side-menu">
                             <li><a><i class="fa fa-user"></i> Control de usuarios <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
-                                    <li><a href="alta_admin.php">Dar de alta</a></li>
+                                    <li><a href="usuario_nuevo.php">Dar de alta</a></li>
                                     <li><a href="desactivar_admin.php">Desactivar usuarios</a></li>
                                 </ul>
                             </li>

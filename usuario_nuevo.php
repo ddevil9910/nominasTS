@@ -17,7 +17,7 @@ require_once  'partials/headers.php';
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Agregar <small>Nuevo Usuario</small></h2>
+                    <h2>Alta - Nuevo Usuario</h2>
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">

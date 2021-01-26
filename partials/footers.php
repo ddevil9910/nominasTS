@@ -1,4 +1,7 @@
 <!-- footer content -->
+</div>
+
+</div>
 <div class="clearfix"></div>
 <div class="clearfix"></div>
 <hr class=ln_solid">
@@ -11,9 +14,7 @@
 
 </footer>
 <!-- /footer content -->
-</div>
 
-</div>
 
 <!-- jQuery -->
 <script src="plantilla/vendors/jquery/dist/jquery.min.js"></script>
