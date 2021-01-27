@@ -29,6 +29,27 @@ function alertas_formr(caso){
             'success'
           )
     break;
+    case 'error':
+        Swal.fire(
+            'OUPS!',
+            'Algo salio mal',
+            'error'
+          )
+    break;
+    case 'usoc':
+        Swal.fire(
+            'OUPS!',
+            'Este usuario ya esta en uso prueba con otro',
+            'info'
+          )
+    break;
+    case 'des':
+        Swal.fire(
+            'OUPS!',
+            'Estees un error desconocido',
+            'error'
+          )
+    break;
         }
 }
 

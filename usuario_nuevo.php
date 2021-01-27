@@ -52,7 +52,7 @@ require_once  'partials/headers.php';
                         <div class="col-md-6 col-sm-6 col-xs-12">
                         <select class="form-control" id="tipo" name="tipo">
                             <option>ROOT</option>
-                            <option>Adminstrador</option>
+                            <option>Administrador</option>
                             <option>Cliente</option>
                           </select>
                         </div>
