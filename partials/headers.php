@@ -69,7 +69,7 @@
                             <li><a><i class="fa fa-user"></i> Control de usuarios <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
                                     <li><a href="usuario_nuevo.php">Dar de alta</a></li>
-                                    <li><a href="desactivar_admin.php">Desactivar usuarios</a></li>
+                                    <li><a href="ver_administradores.php">Ver administradores</a></li>
                                 </ul>
                             </li>
                             <li><a><i class="fa fa-database"></i> Bases de datos <span class="fa fa-chevron-down"></span></a>

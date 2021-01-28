@@ -1,5 +1,5 @@
 <?php
-$page_title = "Alta - Usurio";
+$page_title = "Alta - Usuario";
 require_once  'partials/headers.php';
 ?>
 
