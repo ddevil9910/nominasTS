@@ -93,7 +93,7 @@
                             </li>
                             <li><a><i class="fa fa-building"></i> Empresas <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
-                                    <li><a href="page_403.html">Visualizar</a></li>
+                                    <li><a href="visualizar_empresas.php">Visualizar</a></li>
                                     <li><a href="page_403.html">Eliminar</a></li>
                                 </ul>
                             </li>

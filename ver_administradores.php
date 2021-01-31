@@ -1,5 +1,5 @@
 <?php
-$page_title = "Ver administradores";
+$page_title = "Ver administradores - Control de usuarios";
 require_once  'partials/headers.php';
 ?>
 <!--contenido de la pagina-->
@@ -8,7 +8,7 @@ require_once  'partials/headers.php';
           <div class="">
             <div class="page-title">
               <div class="title_left">
-                <h3>Ver administradores</h3>
+                <h3>Ver administradores - Control de usuarios</h3>
               </div>
             </div>
             <div class="clearfix"></div>
@@ -16,7 +16,7 @@ require_once  'partials/headers.php';
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Todos los adminsitradores</h2>
+                    <h2>Todos los administradores</h2>
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
