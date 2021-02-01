@@ -1,6 +1,7 @@
 <?php
 $page_title = "Ver administradores - Control de usuarios";
 require_once  'partials/headers.php';
+require_once  'partials/parseVisualAdmin.php';
 ?>
 <!--contenido de la pagina-->
 
@@ -31,7 +32,7 @@ require_once  'partials/headers.php';
                         </tr>
                       </thead>
                       <tbody>
-                        <tr>
+                      <tr>
                           <td></td>
                           <td>
                             <a>Andres Sanchez Pérez</a>
@@ -71,7 +72,12 @@ require_once  'partials/headers.php';
 
                       </tbody>
                     </table>
-
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+</div>
 <!--/contenido de la pagina-->
 <?php
 include_once 'partials/footers.php';

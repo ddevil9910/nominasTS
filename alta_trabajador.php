@@ -2,6 +2,8 @@
 $page_title = "Alta - Trabajador";
 require_once  'partials/headers.php';
 ?>
+
+
 <!--contenido de pagina-->
 
 <div class="right_col" role="main">
@@ -152,13 +154,18 @@ require_once  'partials/headers.php';
                     </form>
                   </div>
                   <!--/contenido de pagina-->
-                    <hr>
-                 <?php
-                    include_once 'partials/footers.php';
-                    ?>
+
+
                 </div>
               </div>
             </div>
 </div>
+</div>
+
+    <?php
+    include_once 'partials/footers.php';
+    ?>
+
+</body>
 
 </html>
