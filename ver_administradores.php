@@ -89,6 +89,12 @@ require_once  'partials/headers.php';
                         </div>
                       </div>
                     </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+</div>
 
 
                      
@@ -121,6 +127,6 @@ include_once 'partials/footers.php';
 </script>
 
 
-
+</body>
 
 </html>

@@ -130,9 +130,14 @@ require_once  'partials/headers.php';
             </div>
           </div>
         </div>
+        </div>
+      </div>
+    </div>
+</div>
 
 <!--/contenido de la pagina-->
 <?php
 include_once 'partials/footers.php';
 ?>
+</body>
 </html>
