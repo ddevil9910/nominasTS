@@ -1,7 +1,6 @@
 <?php
 $page_title = "Ver administradores - Control de usuarios";
 require_once  'partials/headers.php';
-require_once  'partials/parseVisualAdmin.php';
 ?>
 <!--contenido de la pagina-->
 
@@ -21,65 +20,107 @@ require_once  'partials/parseVisualAdmin.php';
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
+                  <div id="tabla"></div>
+                  
 
-                     <table class="table table-striped projects">
-                     <thead>
-                        <tr>
-                          <th style="width: 1%"></th>
-                          <th style="width: 47%">Nombre del admistrador</th>
-                          <th style="width: 47%">Empresa asociada</th>
-                          <th style="width: 47%">Acciones</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                      <tr>
-                          <td></td>
-                          <td>
-                            <a>Andres Sanchez Pérez</a>
-                            <br>
-                            <small>Fecha de creación 01.01.2015</small>
-                          </td>
-                          <td>
-                            <a>Dulce vida</a>
-                            <br>
-                            <small>......</small>
-                          </td>
-                          <td>
-                            <a href="#" class="btn btn-primary btn-xs"><i class="fa fa-toggle-on"></i> Habilitado </a>
-                            <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Editar </a>
-                            <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Eliminar </a>
-                          </td>
-                        </tr>
+                    <!-- Modal Editar -->
+                    <div class="modal fade" id="Editar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                      <div class="modal-dialog modal-sm" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">Editar Usuario</h4>
+                          </div>
+                          <div class="modal-body">
+                            <lable>Id del usuario</label>
+                            <input type="Text" class="form-control" id="idac" placeholder="este es tu id" disabled>
+                            <lable>Nombre de usuario</label>
+                            <input type="Text" class="form-control" id="usac" placeholder="Nuevo Nombre de Usuario">
+                            <lable>Estado</label>
+                            <select class="form-control" id="esac">
+                              <option>Activo</option>
+                              <option>Inactivo</option>
+                            </select>
+                            <lable>Tipo de usuario</label>
+                            <select class="form-control" id="tiac">
+                              <option>ROOT</option>
+                              <option>Administrador</option>
+                              <option>Cliente</option>
+                            </select>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-primary" id="actualizar">Confirmar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
 
-                        <tr>
-                          <td></td>
-                          <td>
-                            <a>Ana Flores Castillo</a>
-                            <br>
-                            <small>Fecha de creación 01.01.2015</small>
-                          </td>
-                          <td>
-                            <a>Cafeteria "Gusto bueno"</a>
-                            <br>
-                            <small>********</small>
-                          </td>
-                          <td>
-                            <a href="#" class="btn btn-primary btn-xs"><i class="fa fa-toggle-on"></i> Habilitado </a>
-                            <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Editar </a>
-                            <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Eliminar </a>
-                          </td>
-                        </tr> 
+                     <!-- Modal Eliminar -->
+                     <div class="modal fade" id="Eliminar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                      <div class="modal-dialog modal-sm" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">Eliminar Usuario</h4>
+                          </div>
+                          <div class="modal-body">
+                            <label>Estas seguro de eliminar este usuario??</label>
+                            <lable>Id del usuario</label>
+                            <input type="Text" class="form-control" id="ide" placeholder="este es tu id" disabled>
+                            <lable>Nombre de usuario</label>
+                            <input type="Text" class="form-control" id="use" placeholder="Nuevo Nombre de Usuario" disabled>
+                            <lable>Estado</label>
+                            <select class="form-control" id="ese" disabled>
+                              <option>Activo</option>
+                              <option>Inactivo</option>
+                            </select>
+                            <lable>Tipo de usuario</label>
+                            <select class="form-control" id="tie" disabled>
+                              <option>ROOT</option>
+                              <option>Administrador</option>
+                              <option>Cliente</option>
+                            </select>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-primary" id="eliminar">Confirmar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
 
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-</div>
+
+                     
+
 <!--/contenido de la pagina-->
 <?php
 include_once 'partials/footers.php';
 ?>
+<script src="js/funciones_us.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("#tabla").load("componentes/tabla_us.php");
+  });
+</script>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('#actualizar').click(function(){
+      actualiza();
+    });
+  });
+</script>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('#eliminar').click(function(){
+      eliminar_usuario();
+    });
+  });
+</script>
+
+
+
+
 </html>

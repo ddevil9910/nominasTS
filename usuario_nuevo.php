@@ -76,16 +76,12 @@ require_once  'partials/headers.php';
                     <br>
                   </div>
                   <p class="warnings" id="warnings"></p>
-                </div>
-              </div>
-            </div>
-          </div>
-</div>
+
 
 
 <!--/contenido de la pagina-->
 <?php
 include_once 'partials/footers.php';
 ?>
-</body>
+<script src="js/validaciones.js"></script>
 </html>

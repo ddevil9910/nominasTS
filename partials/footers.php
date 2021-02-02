@@ -1,15 +1,17 @@
 <!-- footer content -->
-
-<!--cierre del divisor de <div class="main_container">  en headers-->
-</div>
-<!--cierre del divisor de <div class="container body">  en headers-->
 </div>
 
+</div>
+<div class="clearfix"></div>
+<div class="clearfix"></div>
+<hr class=ln_solid">
 <footer>
-    <div class="pull-right">
+
+    <div class="footer_fixed pull-right">
+
         Nomina de empleados - Hecho por <a href="javascript:void(0)">...</a>
     </div>
-    <div class="clearfix"></div>
+
 </footer>
 <!-- /footer content -->
 
@@ -82,7 +84,6 @@
     });
 </script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-<script src="js/funciones.js"></script>
-<script src="js/validaciones.js"></script>
 <script src="js/alertas.js"></script>
 
+</body>

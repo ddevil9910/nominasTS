@@ -50,6 +50,13 @@ function alertas_formr(caso){
             'error'
           )
     break;
+    case 'usac':
+        Swal.fire(
+            'Actializado!',
+            'se Actualizo el usuario Correctamente',
+            'success'
+          )
+    break;
         }
 }
 

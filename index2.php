@@ -461,11 +461,8 @@ require_once  'partials/headers.php';
           </div>
         </div>
         <!-- /page content -->
-</div>
 
-</div>
 <?php
 include_once 'partials/footers.php';
 ?>
-</body>
 </html>

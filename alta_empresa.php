@@ -101,14 +101,12 @@ require_once  'partials/headers.php';
                   </div>
                   <!--/contenido de pagina-->
 
-
+                 <?php
+                    include_once 'partials/footers.php';
+                    ?>
                 </div>
               </div>
             </div>
 </div>
-</div>
-    <?php
-    include_once 'partials/footers.php';
-    ?>
-    </body>
+
 </html>

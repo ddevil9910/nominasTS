@@ -13,7 +13,7 @@ switch ($tipo) {
         $errores=0;
         break;
     case 'Administrador':
-        $id_tipo=1;
+        $id_tipo=2;
         $errores=0;
         break;
     case 'Cliente':
@@ -24,10 +24,6 @@ switch ($tipo) {
 
 include ('conexion.php');
 
-
-
- 
- 
 $sql = "INSERT INTO usuarios (id,usuario, password,id_tipo,estado) VALUES ('', '$usuario', MD5('$pass'),'$id_tipo','Activo')";
  mysqli_query($conn, $sql); 
  include ('cerrar_conexion.php');
@@ -36,11 +32,13 @@ $sql = "INSERT INTO usuarios (id,usuario, password,id_tipo,estado) VALUES ('', '
 
 
 if($errores===0){
-    echo json_encode('los datos ingresados son'.$usuario.' '.$password.' '.$id_tipo);
+    echo json_encode('los datos ingresados son '.$usuario.' '.$password.' '.$id_tipo.' '.$tipo);
+
 }else{
     
     echo json_encode('error');
 }
+
 
 
 

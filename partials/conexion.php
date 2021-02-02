@@ -1,6 +1,5 @@
 <?php
 
-
 $servername = "localhost";
 $database = "nominas";
 $username = "root";

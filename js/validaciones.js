@@ -46,6 +46,8 @@ rform.addEventListener("submit", e=>{
             }else{
                 
                 alertas_formr("registro");
+                location.reload();
+
             }
         })
         
