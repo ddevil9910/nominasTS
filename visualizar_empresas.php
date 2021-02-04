@@ -44,7 +44,7 @@ require_once  'partials/headers.php';
                                   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Filtros <span class="caret"></span>
                                   </button>
                                     <ul class="dropdown-menu dropdown-menu-right" role="menu">
-                                      <li><a href="#">Por nombre</a></li>
+                                      <li><label><input type="checkbox" value=""> Por nombre</label></li>
                                       <li><label><input type="checkbox" value=""> Por antigueadad</label></li>
                                     </ul>
                                 </div>
@@ -123,9 +123,7 @@ require_once  'partials/headers.php';
                   </div>
                 </div>
           
-          
-                  </div>
-                </div>
+              
               </div>
             </div>
           </div>

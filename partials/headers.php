@@ -74,7 +74,7 @@
                             </li>
                             <li><a><i class="fa fa-database"></i> Bases de datos <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
-                                    <li><a href="page_403.html">Visualizar</a></li>
+                                    <li><a href="directorio_bd.php">Visualizar</a></li>
                                 </ul>
                             </li>
                         </ul>
