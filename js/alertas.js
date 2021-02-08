@@ -1,4 +1,6 @@
-
+/* jshint browser: true */
+/* jshint node: true */
+/*jshint esversion: 6 */
 function alertas_formr(caso){
    switch(caso){
     case 'nombre':
@@ -23,11 +25,13 @@ function alertas_formr(caso){
           )
     break;
     case 'registro':
-        Swal.fire(
-            'Registrado!',
-            'se registro el usuario Correctamente',
-            'success'
-          )
+        Swal.fire({
+            icon: 'success',
+            title: 'Registrado!',
+            text: 'se hizo el registro correctamente',
+            timer: 5000,
+            showConfirmButton: false
+        })
     break;
     case 'error':
         Swal.fire(

@@ -1,7 +1,10 @@
+/* jshint browser: true */
+/* jshint node: true */
+/*jshint esversion: 6 */
 console.log("conectado a js");
 
 var formulario = document.getElementById('rform');
-rform.addEventListener("submit", e=>{
+    rform.addEventListener("submit", e=>{
     e.preventDefault()
     console.log("diste clic");
 
@@ -42,11 +45,14 @@ rform.addEventListener("submit", e=>{
         .then(data=>{
             console.log(data)
             if(data ==='error'){
-                alertas_formr("usoc");
+                alertas_formr("des");
             }else{
-                
+
                 alertas_formr("registro");
-                location.reload();
+                setTimeout(function(){
+                    window.location.reload();
+                }, 5000);
+
 
             }
         })

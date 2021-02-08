@@ -22,15 +22,19 @@ require_once  'partials/headers.php';
                   <div class="x_content">
                     <br />
                       <!--Formulario de alta de empresa-->
-                    <form id="demo-form2" data-parsley-validate class="form-horizontal ">
+                    <form id="formAltaEmp" data-parsley-validate class="form-horizontal">
 
                         <!--Nombre o razon social-->
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Nombre o Razon Social <span class="required">*</span>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="Nombre o razon" id="lblRazon">Nombre o Razon Social <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <input type="text" id="razon" name="razon" required class="form-control col-md-7 col-xs-12"  >
+                            <!--las alertas permiten verificar al usuario si se escriben el en formato correcto los campos-->
+                            <div id="alerta1" class="col-lg-8"></div>
                         </div>
+
+
                       </div>
                         <!--RFC-->
                       <div class="form-group">
@@ -38,6 +42,7 @@ require_once  'partials/headers.php';
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <input type="text" id="rfc" name="rfc" required class="form-control col-md-7 col-xs-12"  >
+                            <div id="alerta2" class="col-lg-8"></div>
                         </div>
                       </div>
                         <!--CURP-->
@@ -45,6 +50,7 @@ require_once  'partials/headers.php';
                         <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">CURP</label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <input id="curp" class="form-control col-md-7 col-xs-12" type="text" name="curp"  >
+                            <div id="alerta3" class="col-lg-8"></div>
                         </div>
                       </div>
                         <!--Direccion fiscal-->
@@ -53,6 +59,7 @@ require_once  'partials/headers.php';
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <input id="direccion" name="direccion" class="date-picker form-control col-md-7 col-xs-12" required type="text"  >
+                            <div id="alerta4" class="col-lg-8"></div>
                         </div>
                       </div>
                         <!--Giro de la empresa-->
@@ -61,6 +68,7 @@ require_once  'partials/headers.php';
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <input id="giro" name="giro" class="date-picker form-control col-md-7 col-xs-12" required type="text"  >
+                            <div id="alerta5" class="col-lg-8"></div>
                         </div>
                       </div>
                         <!--Representante legal-->
@@ -68,15 +76,17 @@ require_once  'partials/headers.php';
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Representante Legal <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input id="reprecentante" name="reprecentante" class="date-picker form-control col-md-7 col-xs-12" required type="text"  >
+                          <input id="representante" name="representante" class="date-picker form-control col-md-7 col-xs-12" required type="text"  >
+                            <div id="alerta6" class="col-lg-8"></div>
                         </div>
                       </div>
                         <!--RFC representante legal-->
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">RFC del Reprecentante legal <span class="required">*</span>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">RFC del Representante legal <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <input id="rfcr" name="rfcr" class="date-picker form-control col-md-7 col-xs-12" required type="text"  >
+                            <div id="alerta7" class="col-lg-8"></div>
                         </div>
                       </div>
                         <!--Correo electronico-->
@@ -85,6 +95,7 @@ require_once  'partials/headers.php';
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <input id="email" name="email" class="date-picker form-control col-md-7 col-xs-12" required type="email">
+                            <div id="alerta8" class="col-lg-8"></div>
                         </div>
                       </div>
                         <hr class="ln_solid">
@@ -93,7 +104,7 @@ require_once  'partials/headers.php';
                             <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
                                 <button class="btn btn-primary" type="button">Cancelar</button>
                                 <button class="btn btn-primary" type="reset">Limpiar</button>
-                                <button type="submit" class="btn btn-success">Guardar</button>
+                                <button type="submit" class="btn btn-success" id="btnGuardar" name="btnGuardar" disabled>Guardar</button>
                             </div>
                         </div>
 
@@ -105,11 +116,14 @@ require_once  'partials/headers.php';
                 </div>
               </div>
             </div>
+    </div>
 </div>
+
+
 
     <?php
     include_once 'partials/footers.php';
     ?>
     </body>
-
+    <script src="js/empresaAlta.js"></script>
 </html>

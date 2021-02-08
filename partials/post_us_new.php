@@ -33,7 +33,6 @@ $sql = "INSERT INTO usuarios (id,usuario, password,id_tipo,estado) VALUES ('', '
 
 if($errores===0){
     echo json_encode('los datos ingresados son '.$usuario.' '.$password.' '.$id_tipo.' '.$tipo);
-
 }else{
     
     echo json_encode('error');

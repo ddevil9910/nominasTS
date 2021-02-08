@@ -1,3 +1,6 @@
+/* jshint browser: true */
+/* jshint node: true */
+/*jshint esversion: 6 */
 function agregaform(datos){
     d=datos.split('||')
     $('#idac').val(d[0]);
