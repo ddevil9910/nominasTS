@@ -48,7 +48,9 @@ require_once  'partials/headers.php';
 		        </div>
 		      </div>
 		  </div>
-	 </div>
+              </div>
+            </div>
+          </div>
 </div>
 
 <!--/contenido de la pagina-->

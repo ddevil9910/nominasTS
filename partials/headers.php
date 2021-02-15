@@ -87,13 +87,13 @@
                         <ul class="nav side-menu">
                             <li><a><i class="fa fa-user"></i> Control de usuarios <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
-                                    <li><a href="alta_empresa.php">Alta de empresas</a></li>
                                     <li><a href="alta_trabajador.php">Alta de trabajador</a></li>
                                 </ul>
                             </li>
                             <li><a><i class="fa fa-building"></i> Empresas <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
                                     <li><a href="visualizar_empresas.php">Visualizar</a></li>
+                                    <li><a href="alta_empresa.php">Alta de empresas</a></li>
                                     <li><a href="page_403.html">Eliminar</a></li>
                                 </ul>
                             </li>

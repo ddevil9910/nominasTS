@@ -32,16 +32,16 @@ require_once  'partials/headers.php';
                             <h4 class="modal-title" id="myModalLabel">Editar Usuario</h4>
                           </div>
                           <div class="modal-body">
-                            <lable>Id del usuario</label>
+                            <label>Id del usuario</label>
                             <input type="Text" class="form-control" id="idac" placeholder="este es tu id" disabled>
-                            <lable>Nombre de usuario</label>
+                            <label>Nombre de usuario</label>
                             <input type="Text" class="form-control" id="usac" placeholder="Nuevo Nombre de Usuario">
-                            <lable>Estado</label>
+                            <label>Estado</label>
                             <select class="form-control" id="esac">
                               <option>Activo</option>
                               <option>Inactivo</option>
                             </select>
-                            <lable>Tipo de usuario</label>
+                            <label>Tipo de usuario</label>
                             <select class="form-control" id="tiac">
                               <option>ROOT</option>
                               <option>Administrador</option>
@@ -66,16 +66,16 @@ require_once  'partials/headers.php';
                           </div>
                           <div class="modal-body">
                             <label>Estas seguro de eliminar este usuario??</label>
-                            <lable>Id del usuario</label>
+                            <label>Id del usuario</label>
                             <input type="Text" class="form-control" id="ide" placeholder="este es tu id" disabled>
-                            <lable>Nombre de usuario</label>
+                            <label>Nombre de usuario</label>
                             <input type="Text" class="form-control" id="use" placeholder="Nuevo Nombre de Usuario" disabled>
-                            <lable>Estado</label>
+                            <label>Estado</label>
                             <select class="form-control" id="ese" disabled>
                               <option>Activo</option>
                               <option>Inactivo</option>
                             </select>
-                            <lable>Tipo de usuario</label>
+                            <label>Tipo de usuario</label>
                             <select class="form-control" id="tie" disabled>
                               <option>ROOT</option>
                               <option>Administrador</option>
