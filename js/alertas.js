@@ -61,7 +61,22 @@ function alertas_formr(caso){
             'success'
           )
     break;
+    case 'pass_in':
+        Swal.fire(
+            'OUPS!',
+            'Revisa tus contraseñas',
+            'error'
+          )
+    break;
+    case 'login':
+        Swal.fire(
+            'Bienvenido!',
+            'Credenciales correctas',
+            'success'
+          )
+    break;
         }
+        
 }
 
 

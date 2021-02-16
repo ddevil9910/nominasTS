@@ -30,17 +30,16 @@
       <div class="login_wrapper">
         <div class="animate form login_form">
           <section class="login_content">
-            <form>
+            <form id="lform" name="lform">
               <h1>Inicia sesión</h1>
               <div>
-                <input type="text" class="form-control" placeholder="Usuario" required="" />
+                <input type="text" class="form-control" placeholder="Usuario" required="true" id="lus" name="lus" />
               </div>
               <div>
-                <input type="password" class="form-control" placeholder="Contraseña" required="" />
+                <input type="password" class="form-control" placeholder="Contraseña" required="true" id="lpas" name="lpas" />
               </div>
               <div>
-                <a class="btn btn-default submit" href="index2.php">Entrar</a>
-                <a class="reset_pass" href="#">Olvidaste tu contraseña?</a>
+                <Button Type="submit" class="btn btn-success">Ingresar</Button>
               </div>
 
               <div class="clearfix"></div>
@@ -59,5 +58,8 @@
         </div>
       </div>
     </div>
+    <script src="js/login.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="js/alertas.js"></script>
   </body>
 </html>
