@@ -85,7 +85,7 @@
                     <div class="menu_section">
                         <h3>Administrador</h3>
                         <ul class="nav side-menu">
-                            <li><a><i class="fa fa-user"></i> Control de usuarios <span class="fa fa-chevron-down"></span></a>
+                            <li><a><i class="fa fa-user"></i> Empleados <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
                                     <li><a href="alta_trabajador.php">Alta de trabajador</a></li>
                                 </ul>
@@ -97,19 +97,16 @@
                                     <li><a href="page_403.html">Eliminar</a></li>
                                 </ul>
                             </li>
+                            <li><a><i class="fa fa-money"></i> Nómina <span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li><a href="#">Configuración de Nómina</a></li>
+
+                                </ul>
+                            </li>
                         </ul>
                     </div>
                     <!--/menu del administrador-->
 
-                    <!--menu del empleado-->
-                    <div class="menu_section">
-                        <h3>Empleado</h3>
-                        <ul class="nav side-menu">
-                            <li><a href="mi_nomina.php"><i class="fa fa-money"></i> Nomina</a></li>
-
-                        </ul>
-                    </div>
-                    <!--/menu del empleado-->
 
                 </div>
                 <!-- /sidebar menu -->

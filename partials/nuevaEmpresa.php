@@ -6,25 +6,40 @@
 
 //Comprobar si las variables estan vacias
 $RazonSocial= !empty($_POST['razon']) ? $_POST['razon'] : '';
+$Nombre= !empty($_POST['nombre']) ? $_POST['nombre'] : '';
 $RFC= !empty($_POST['rfc']) ? $_POST['rfc'] : '';
 $CURP= !empty($_POST['curp']) ? $_POST['curp'] : '';
 $Direccion= !empty($_POST['direccion']) ? $_POST['direccion'] : '';
 $Giro= !empty($_POST['giro']) ? $_POST['giro'] : '';
 $NombreRep= !empty($_POST['representante']) ? $_POST['representante'] : '';
 $RFCRep= !empty($_POST['rfcr']) ? $_POST['rfcr'] : '';
+$CURPRep= !empty($_POST['curpr']) ? $_POST['curpr'] : '';
 $CorreoElec= !empty($_POST['email']) ? $_POST['email'] : '';
+$TipoPersona= !empty($_POST['tipoPersona']) ? $_POST['tipoPersona'] : '';
 
-//Evitar un acceso directo por URL
-if(empty($RazonSocial) || empty($RFC) || empty($CURP) || empty($Direccion) || empty($Giro)) {
+//Evitar un acceso directo por URL o un campo vacio enviado por un ispector de codigo
+if(empty($CURPRep) || empty($RFC) || empty($CURPRep) || empty($Direccion) || empty($CorreoElec)) {
     die('Direct access not permitted');
 }
+
+if(!empty($RazonSocial) && !empty($Nombre)) {
+    die('Ha ocurrido un error inesperado, por favor recarga la pagina');
+}
+
+if(empty($RazonSocial) && empty($Nombre)) {
+    die('Ha ocurrido un error inesperado, por favor recarga la pagina');
+}
+
+
 
 //inicializar variables para acceder a la base de datos
 $config = require __DIR__ . '/../config/app.php';
 $host = $config['database']['host'];
 $db_username = $config['database']['username'];
 $db_password = $config['database']['password'];
-
+$sql_tabla = null;
+$sql_datos = null;
+$sql2 = null;
 /*pendiente: variables de sesion*/
 $id_admin=1;//////////////////////
 /*pendiente: variables de sesion*/
@@ -43,19 +58,67 @@ if ($conn2->connect_error) {
 }
 // Create database
 $sql = "CREATE DATABASE IF NOT EXISTS $nombreDB";
-$sql_tabla="CREATE TABLE `datos` (
-  `id` int(5) NOT NULL,
-  `nombre` varchar(100) NOT NULL,
-  `rfc` varchar(12) NOT NULL,
-  `curp` varchar(18) NOT NULL,
-  `direccion` varchar(50) NOT NULL,
-  `giro` varchar(50) NOT NULL,
-  `representante` varchar(100) NOT NULL,
-  `rfc_representante` varchar(15) NOT NULL,
-  `correo` varchar(20) NOT NULL,
-  `fecha` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-";
+
+
+
+if($TipoPersona=="moral"){
+    $sql_tabla="CREATE TABLE `datos` (
+        `id` int(5) NOT NULL,
+        `razon_social` varchar(100) NOT NULL,
+        `rfc` varchar(13) NOT NULL,        
+        `giro` varchar(50) NOT NULL,
+        `direccion` varchar(50) NOT NULL,
+        `representante` varchar(100) NOT NULL,
+        `rfc_representante` varchar(15) NOT NULL,
+        `curp_representante` VARCHAR(18) NOT NULL ,
+        `correo` varchar(20) NOT NULL,
+        `fecha` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+    ";
+    $sql_datos="INSERT INTO datos (id,razon_social, rfc,giro,direccion,representante,rfc_representante,curp_representante,correo) VALUES (
+                                                                                                               '',
+                                                                                                               '$RazonSocial',
+                                                                                                               '$RFC',
+                                                                                                               '$Giro',
+                                                                                                               '$Direccion',
+                                                                                                               '$NombreRep',                                                                                                               
+                                                                                                               '$RFCRep',
+                                                                                                               '$CURPRep',
+                                                                                                               '$CorreoElec')
+    ";
+    $sql2 = "INSERT INTO directorio (id_registro,nombre_empresa, id_admin,representante, bd_empresa) VALUES ('', '$RazonSocial', '$id_admin ', '$NombreRep', '$nombreDB')";
+
+} else if($TipoPersona=="fisica"){
+    $sql_tabla="CREATE TABLE `datos` (
+        `id` int(5) NOT NULL,
+        `nombre` varchar(100) NOT NULL,
+        `rfc` varchar(13) NOT NULL,        
+        `curp` VARCHAR(18) NOT NULL ,
+        `direccion` varchar(50) NOT NULL,
+        `representante` varchar(100) NOT NULL,
+        `rfc_representante` varchar(15) NOT NULL,
+        `curp_representante` VARCHAR(18) NOT NULL ,
+        `correo` varchar(20) NOT NULL,
+        `fecha` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+    ";
+    $sql_datos="INSERT INTO datos (id,nombre, rfc,curp,direccion,representante,rfc_representante,curp_representante,correo) VALUES (
+                                                                                                               '',
+                                                                                                               '$Nombre',
+                                                                                                               '$RFC',
+                                                                                                               '$CURP',
+                                                                                                               '$Direccion',
+                                                                                                               '$NombreRep',                                                                                                               
+                                                                                                               '$RFCRep',
+                                                                                                               '$CURPRep',
+                                                                                                               '$CorreoElec')
+    ";
+    $sql2 = "INSERT INTO directorio (id_registro,nombre_empresa, id_admin,representante, bd_empresa) VALUES ('', '$Nombre', '$id_admin ', '$NombreRep', '$nombreDB')";
+}
+else{
+    die();
+}
+
 $sql_tabla2="CREATE TABLE `empleados` (
  `id_empleado` INT(5) NOT NULL AUTO_INCREMENT ,
  `numero_empleado` VARCHAR(15) NOT NULL ,
@@ -83,16 +146,7 @@ $sql_tabla3="CREATE TABLE `archivos` (
 ";
 
 
-$sql_datos="INSERT INTO datos (id,nombre, rfc,curp,direccion,giro,representante,rfc_representante,correo) VALUES (
-                                                                                                               '',
-                                                                                                               '$RazonSocial',
-                                                                                                               '$RFC',
-                                                                                                               '$CURP',
-                                                                                                               '$Direccion',
-                                                                                                               '$Giro',
-                                                                                                               '$NombreRep',
-                                                                                                               '$RFCRep',
-                                                                                                               '$CorreoElec')";
+
 if ($conn2->query($sql) === TRUE) {
    /* echo json_encode("Base de datos creada");*/
     $errores=0;
@@ -111,7 +165,7 @@ $conn2->close();
 
 /*guardar datos en el directorio*/
 include ('conexion.php');
-$sql2 = "INSERT INTO directorio (id_registro,nombre_empresa, id_admin,representante, bd_empresa) VALUES ('', '$RazonSocial', '$id_admin ', '$NombreRep', '$nombreDB')";
+
 mysqli_query($conn, $sql2);
 include ('cerrar_conexion.php');
 if($errores===0){

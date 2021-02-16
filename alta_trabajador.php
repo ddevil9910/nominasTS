@@ -117,12 +117,10 @@ require_once  'partials/headers.php';
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Tipo de Empleado <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                        <select class="form-control">
-                            <option>Choose option</option>
-                            <option>Option one</option>
-                            <option>Option two</option>
-                            <option>Option three</option>
-                            <option>Option four</option>
+                        <select class="form-control" name="tipoEmpleado">
+                            <option value="permanente">Permanente</option>
+                            <option value="a_prueba">A prueba</option>
+                            <option value="eventual">Eventual</option>
                           </select>
                         </div>
                       </div>
