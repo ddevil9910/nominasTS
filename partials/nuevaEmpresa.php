@@ -22,10 +22,10 @@ if(empty($CURPRep) || empty($RFC) || empty($CURPRep) || empty($Direccion) || emp
     die('Direct access not permitted');
 }
 
+//Mediante un XOR evitamos que alguien manipule los datos y solo acepte o nombre o razon social
 if(!empty($RazonSocial) && !empty($Nombre)) {
     die('Ha ocurrido un error inesperado, por favor recarga la pagina');
 }
-
 if(empty($RazonSocial) && empty($Nombre)) {
     die('Ha ocurrido un error inesperado, por favor recarga la pagina');
 }

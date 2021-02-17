@@ -85,6 +85,7 @@ $(document).ready(function () {
                 var tipo = event.target.value;
                 /*Verificar el tipo de persona: Moral*/
                 if (tipo == "moral"){
+
                     document.getElementById("divRazon").style.display='block';
                     document.getElementById("divNombre").style.display='none';
                     document.getElementById("divCURP").style.display='none';
@@ -112,7 +113,7 @@ $(document).ready(function () {
                             if (letras.indexOf(c) < 0) {
                                 $("#btnGuardar").prop("disabled", true);
                                 $("#alerta" + iden).html(
-                                    "<font color=brown><b>La posición " +
+                                    "<font color=#b22222><b>La posición " +
                                     (i + 1) +
                                     " debe ser una letra</b></font>"
                                 );
@@ -147,7 +148,7 @@ $(document).ready(function () {
                             if (letras.indexOf(c) < 0) {
                                 $("#btnGuardar").prop("disabled", true);
                                 $("#alerta" + iden).html(
-                                    "<font color=brown><b>La posición " +
+                                    "<font color=#b22222><b>La posición " +
                                     (i + 1) +
                                     " debe ser una letra</b></font>"
                                 );
@@ -195,7 +196,7 @@ $(document).ready(function () {
                             if (letras.indexOf(c) < 0) {
                                 $("#btnGuardar").prop("disabled", true);
                                 $("#alerta" + iden).html(
-                                    "<font color=brown><b>La posición " +
+                                    "<font color=#b22222><b>La posición " +
                                     (i + 1) +
                                     " debe ser una letra</b></font>"
                                 );
@@ -230,7 +231,7 @@ $(document).ready(function () {
                                 if (q == "?" && lyn.indexOf(c) < 1) {
                                     $("#btnGuardar").prop("disabled", true);
                                     $("#alerta" + iden).html(
-                                        "<font color=brown><b>La posición " +
+                                        "<font color=#b22222><b>La posición " +
                                         (i + 1) +
                                         " debe ser una letra o dígito (0-9)</b></font>"
                                     );
@@ -240,7 +241,7 @@ $(document).ready(function () {
                                 if (q == "X" && letras.indexOf(c) < 1) {
                                     $("#btnGuardar").prop("disabled", true);
                                     $("#alerta" + iden).html(
-                                        "<font color=brown><b>La posición " +
+                                        "<font color=#b22222><b>La posición " +
                                         (i + 1) +
                                         " debe ser una letra</b></font>"
                                     );
@@ -250,7 +251,7 @@ $(document).ready(function () {
                                 if (q == "V" && vocales.indexOf(c) < 1) {
                                     $("#btnGuardar").prop("disabled", true);
                                     $("#alerta" + iden).html(
-                                        "<font color=brown><b>La posición " +
+                                        "<font color=#b22222><b>La posición " +
                                         (i + 1) +
                                         " debe ser una vocal</b></font>"
                                     );
@@ -260,7 +261,7 @@ $(document).ready(function () {
                                 if (q == "C" && consonantes.indexOf(c) < 1) {
                                     $("#btnGuardar").prop("disabled", true);
                                     $("#alerta" + iden).html(
-                                        "<font color=brown><b>La posición " +
+                                        "<font color=#b22222><b>La posición " +
                                         (i + 1) +
                                         " debe ser una consonante</b></font>"
                                     );
@@ -270,7 +271,7 @@ $(document).ready(function () {
                                 if (q == "9" && digitos.indexOf(c) < 1) {
                                     $("#btnGuardar").prop("disabled", true);
                                     $("#alerta" + iden).html(
-                                        "<font color=brown><b>La posición " +
+                                        "<font color=#b22222><b>La posición " +
                                         (i + 1) +
                                         " debe ser un número (0-9)</b></font>"
                                     );
@@ -280,7 +281,7 @@ $(document).ready(function () {
                                 if (q == "S" && sexo.indexOf(c) < 1) {
                                     $("#btnGuardar").prop("disabled", true);
                                     $("#alerta" + iden).html(
-                                        "<font color=brown><b>La posición " +
+                                        "<font color=#b22222><b>La posición " +
                                         (i + 1) +
                                         " debe ser H(ombre) o M(ujer)</b></font>"
                                     );
@@ -341,7 +342,7 @@ $(document).ready(function () {
                 if (q == "?" && lyn.indexOf(c) < 1) {
                     $("#btnGuardar").prop("disabled", true);
                     $("#alerta" + iden).html(
-                        "<font color=brown><b>La posición " +
+                        "<font color=#b22222><b>La posición " +
                         (i + 1) +
                         " debe ser una letra o dígito (0-9)</b></font>"
                     );
@@ -351,7 +352,7 @@ $(document).ready(function () {
                 if (q == "X" && letras.indexOf(c) < 1) {
                     $("#btnGuardar").prop("disabled", true);
                     $("#alerta" + iden).html(
-                        "<font color=brown><b>La posición " +
+                        "<font color=#b22222><b>La posición " +
                         (i + 1) +
                         " debe ser una letra</b></font>"
                     );
@@ -361,7 +362,7 @@ $(document).ready(function () {
                 if (q == "V" && vocales.indexOf(c) < 1) {
                     $("#btnGuardar").prop("disabled", true);
                     $("#alerta" + iden).html(
-                        "<font color=brown><b>La posición " +
+                        "<font color=#b22222><b>La posición " +
                         (i + 1) +
                         " debe ser una vocal</b></font>"
                     );
@@ -371,7 +372,7 @@ $(document).ready(function () {
                 if (q == "C" && consonantes.indexOf(c) < 1) {
                     $("#btnGuardar").prop("disabled", true);
                     $("#alerta" + iden).html(
-                        "<font color=brown><b>La posición " +
+                        "<font color=#b22222><b>La posición " +
                         (i + 1) +
                         " debe ser una consonante</b></font>"
                     );
@@ -381,7 +382,7 @@ $(document).ready(function () {
                 if (q == "9" && digitos.indexOf(c) < 1) {
                     $("#btnGuardar").prop("disabled", true);
                     $("#alerta" + iden).html(
-                        "<font color=brown><b>La posición " +
+                        "<font color=#b22222><b>La posición " +
                         (i + 1) +
                         " debe ser un número (0-9)</b></font>"
                     );
@@ -432,7 +433,7 @@ $(document).ready(function () {
 
                 $("#btnGuardar").prop("disabled", true);
                 $("#alerta" + iden).html(
-                    "<font color=brown><b>La posición " +
+                    "<font color=#b22222><b>La posición " +
                     (i + 1) +
                     " debe ser una letra, numero o coma</b></font>"
                 );
@@ -467,7 +468,7 @@ $(document).ready(function () {
             if (letras.indexOf(c) < 0) {
                 $("#btnGuardar").prop("disabled", true);
                 $("#alerta" + iden).html(
-                    "<font color=brown><b>La posición " +
+                    "<font color=#b22222><b>La posición " +
                     (i + 1) +
                     " debe ser una letra</b></font>"
                 );
@@ -503,7 +504,7 @@ $(document).ready(function () {
                 if (q == "?" && lyn.indexOf(c) < 1) {
                     $("#btnGuardar").prop("disabled", true);
                     $("#alerta" + iden).html(
-                        "<font color=brown><b>La posición " +
+                        "<font color=#b22222><b>La posición " +
                         (i + 1) +
                         " debe ser una letra o dígito (0-9)</b></font>"
                     );
@@ -513,7 +514,7 @@ $(document).ready(function () {
                 if (q == "X" && letras.indexOf(c) < 1) {
                     $("#btnGuardar").prop("disabled", true);
                     $("#alerta" + iden).html(
-                        "<font color=brown><b>La posición " +
+                        "<font color=#b22222><b>La posición " +
                         (i + 1) +
                         " debe ser una letra</b></font>"
                     );
@@ -523,7 +524,7 @@ $(document).ready(function () {
                 if (q == "V" && vocales.indexOf(c) < 1) {
                     $("#btnGuardar").prop("disabled", true);
                     $("#alerta" + iden).html(
-                        "<font color=brown><b>La posición " +
+                        "<font color=#b22222><b>La posición " +
                         (i + 1) +
                         " debe ser una vocal</b></font>"
                     );
@@ -533,7 +534,7 @@ $(document).ready(function () {
                 if (q == "C" && consonantes.indexOf(c) < 1) {
                     $("#btnGuardar").prop("disabled", true);
                     $("#alerta" + iden).html(
-                        "<font color=brown><b>La posición " +
+                        "<font color=#b22222><b>La posición " +
                         (i + 1) +
                         " debe ser una consonante</b></font>"
                     );
@@ -543,7 +544,7 @@ $(document).ready(function () {
                 if (q == "9" && digitos.indexOf(c) < 1) {
                     $("#btnGuardar").prop("disabled", true);
                     $("#alerta" + iden).html(
-                        "<font color=brown><b>La posición " +
+                        "<font color=#b22222><b>La posición " +
                         (i + 1) +
                         " debe ser un número (0-9)</b></font>"
                     );
@@ -589,7 +590,7 @@ $(document).ready(function () {
                 if (q == "?" && lyn.indexOf(c) < 1) {
                     $("#btnGuardar").prop("disabled", true);
                     $("#alerta" + iden).html(
-                        "<font color=brown><b>La posición " +
+                        "<font color=#b22222><b>La posición " +
                         (i + 1) +
                         " debe ser una letra o dígito (0-9)</b></font>"
                     );
@@ -599,7 +600,7 @@ $(document).ready(function () {
                 if (q == "X" && letras.indexOf(c) < 1) {
                     $("#btnGuardar").prop("disabled", true);
                     $("#alerta" + iden).html(
-                        "<font color=brown><b>La posición " +
+                        "<font color=#b22222><b>La posición " +
                         (i + 1) +
                         " debe ser una letra</b></font>"
                     );
@@ -609,7 +610,7 @@ $(document).ready(function () {
                 if (q == "V" && vocales.indexOf(c) < 1) {
                     $("#btnGuardar").prop("disabled", true);
                     $("#alerta" + iden).html(
-                        "<font color=brown><b>La posición " +
+                        "<font color=#b22222><b>La posición " +
                         (i + 1) +
                         " debe ser una vocal</b></font>"
                     );
@@ -619,7 +620,7 @@ $(document).ready(function () {
                 if (q == "C" && consonantes.indexOf(c) < 1) {
                     $("#btnGuardar").prop("disabled", true);
                     $("#alerta" + iden).html(
-                        "<font color=brown><b>La posición " +
+                        "<font color=#b22222><b>La posición " +
                         (i + 1) +
                         " debe ser una consonante</b></font>"
                     );
@@ -629,7 +630,7 @@ $(document).ready(function () {
                 if (q == "9" && digitos.indexOf(c) < 1) {
                     $("#btnGuardar").prop("disabled", true);
                     $("#alerta" + iden).html(
-                        "<font color=brown><b>La posición " +
+                        "<font color=#b22222><b>La posición " +
                         (i + 1) +
                         " debe ser un número (0-9)</b></font>"
                     );
@@ -639,7 +640,7 @@ $(document).ready(function () {
                 if (q == "S" && sexo.indexOf(c) < 1) {
                     $("#btnGuardar").prop("disabled", true);
                     $("#alerta" + iden).html(
-                        "<font color=brown><b>La posición " +
+                        "<font color=#b22222><b>La posición " +
                         (i + 1) +
                         " debe ser H(ombre) o M(ujer)</b></font>"
                     );
@@ -685,7 +686,7 @@ $(document).ready(function () {
             {
                 $("#btnGuardar").prop("disabled", true);
                 $("#alerta" + iden).html(
-                    "<font color=brown><b>Escribe un correo valido</b></font>"
+                    "<font color=#b22222><b>Escribe un correo valido</b></font>"
                 );
                 return false;
             }

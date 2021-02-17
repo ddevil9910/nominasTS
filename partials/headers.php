@@ -1,3 +1,9 @@
+<?php
+include_once 'partials/session.php';
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -143,8 +149,8 @@
                             <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                                 <img src="img/alpaca.jpg" alt="">
                                 <?php
-                                   
-                                    echo $_SESSION['usuario'];
+
+                                    echo $_SESSION['usuarioR'];
                                 ?>
                                 <span class=" fa fa-angle-down"></span>
                             </a>

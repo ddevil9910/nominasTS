@@ -14,7 +14,7 @@ if($accion=='login'){
     //hacemos un try para probar el proceso que se ejecutara
 
     try{
-        //todo funciona bien
+        /*todo funciona bien*/
 
         //seleccionamos el usuariomen la base de datos
         $stmt=$conn->prepare("SELECT id,usuario,password,id_tipo,estado FROM usuarios WHERE usuario = '$usuario'and password = md5('$contra')");
@@ -32,7 +32,8 @@ if($accion=='login'){
         if($db_usuario){
             
            @session_start();
-           $_SESSION['usuario']=$_POST['usuario'];
+           $_SESSION['usuarioR']=$db_usuario;
+           $_SESSION['estadoR']=$db_estado;
            
             //creamos un array que codificamos en json para crear un objeto en js
             $respuesta = array(

@@ -1,10 +1,13 @@
 
 <!--funcon para los titulos de las paginas--> 
 <?php
+if(isset($_SESSION['usuarioR'])){
+    header("Location: login.php");
+}
 $page_title = "Nomina - Inicio";
 require_once  'partials/headers.php';
 ?>
-
+<?php if ($_SESSION['estadoR']=='Activo'){ ?>
         <!-- page content -->
         <div class="right_col" role="main">
           <div class="">
@@ -468,6 +471,11 @@ require_once  'partials/headers.php';
 
 </div>
 
+<?php } else{ ?>
+<P class="lead">No has accedido. <a href="login.php">Entrar</a>
+    ¿Aún no te has registrado? <a href="signup.php">Registrarse</a> </P>
+
+<?php } ?>
 <?php
 include_once 'partials/footers.php';
 ?>

@@ -110,7 +110,7 @@ require_once  'partials/headers.php';
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Direccion <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input id="rfcr" name="rfcr" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
+                          <input id="rfct" name="rfct" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
                         </div>
                       </div>
                       <div class="form-group">
@@ -153,8 +153,11 @@ require_once  'partials/headers.php';
                    
                 </div>
               </div>
+
             </div>
+          </div>
 </div>
+
 
 
     <?php

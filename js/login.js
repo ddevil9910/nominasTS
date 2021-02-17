@@ -1,3 +1,6 @@
+/* jshint browser: true */
+/* jshint node: true */
+/* jshint esversion: 6 */
 console.log("conectado a js");
 
 document.querySelector('#lform').addEventListener('submit', login);
@@ -83,8 +86,9 @@ function login(e){
                         timer: 5000,
                         showConfirmButton: false
                     });
+
                     setTimeout(function(){
-                        window.location.reload();
+                        window.location.href = 'index2.php';
                     }, 5000);
                     
                     
