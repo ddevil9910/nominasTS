@@ -1,5 +1,8 @@
 <?php
 
+
+
+
 $contra=$_POST['ps'];
 $accion=$_POST['accion'];
 $usuario=$_POST['usuario'];
@@ -27,14 +30,16 @@ if($accion=='login'){
         //construimos la respuesta en arreglo para codificarla en objeto por js
        
         if($db_usuario){
+            
+            
 
-           
-            
-            
+            //creamos un array que codificamos en json para crear un objeto en js
             $respuesta = array(
                 'msm'=>'correcto',
                 'usuario'=> $usuario
             );
+
+
 
 
             /*$respuesta = array(

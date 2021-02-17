@@ -1,3 +1,5 @@
+
+<!--funcon para los titulos de las paginas--> 
 <?php
 $page_title = "Nomina - Inicio";
 require_once  'partials/headers.php';

@@ -60,7 +60,7 @@ function login(e){
             //comprobamos que la ajecuccion fue exitosa
             if(this.status === 200 ){
 
-               // console.log(JSON.parse(xhr.responseText));
+                console.log(JSON.parse(xhr.responseText));
 
 
 
@@ -71,12 +71,17 @@ function login(e){
                 //podemos acceder alas propiedades del objeto
                 console.log(mensaje['msm']);
                 console.log(mensaje['usuario']);
+               
 
                 
 
                 if(mensaje['msm']==='correcto'){
-                    alertas_formr("login");
-                    setTimeout("location.href='index2.php'", 800);
+                    //mensaje personalizado
+                    Swal.fire(
+                        'Bienvenido',
+                        'Hola  '+ mensaje['usuario'],
+                        'success');
+                    //setTimeout("location.href='index2.php'", 800);
                     
                     
                 }else{
