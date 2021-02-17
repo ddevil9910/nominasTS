@@ -1,6 +1,8 @@
 <?php
 include_once 'partials/session.php';
-
+if(!(isset($_SESSION['usuarioR']))){
+    header("Location: login.php");
+}
 ?>
 
 
@@ -49,8 +51,12 @@ include_once 'partials/session.php';
                         <img src="img/alpaca.jpg"  class="img-rounded img-circle profile_img">
                     </div>
                     <div class="profile_info">
-                        <span>Welcome,</span>
-                        <h2>John Doe</h2>
+                        <span>Bienvenido,</span>
+                        <h2>
+                            <?php
+                            echo $_SESSION['usuarioR'];
+                            ?>
+                        </h2>
                     </div>
                 </div>
                 <!-- /menu profile quick info -->
@@ -163,7 +169,7 @@ include_once 'partials/session.php';
                                     </a>
                                 </li>
                                 <li><a href="javascript:;">Help</a></li>
-                                <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                                <li><a href="logout.php"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                             </ul>
                         </li>
 
