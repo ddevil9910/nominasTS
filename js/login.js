@@ -77,10 +77,17 @@ function login(e){
 
                 if(mensaje['msm']==='correcto'){
                     //mensaje personalizado
-                    Swal.fire(
-                        'Bienvenido',
-                        'Hola  '+ mensaje['usuario'],
-                        'success');
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Hola  '+ mensaje['usuario'],
+                        timer: 5000,
+                        showConfirmButton: false
+                    });
+                    setTimeout(function(){
+                        window.location.reload();
+                    }, 5000);
+                    
+                    
                     //setTimeout("location.href='index2.php'", 800);
                     
                     

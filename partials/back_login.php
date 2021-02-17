@@ -31,13 +31,19 @@ if($accion=='login'){
        
         if($db_usuario){
             
-            
-
+           @session_start();
+           $_SESSION['usuario']=$_POST['usuario'];
+           
             //creamos un array que codificamos en json para crear un objeto en js
             $respuesta = array(
                 'msm'=>'correcto',
-                'usuario'=> $usuario
+                'usuario'=> $usuario,
+                
             );
+            
+
+             
+             //exit();
 
 
 
