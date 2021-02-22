@@ -86,7 +86,10 @@ if($TipoPersona=="moral"){
                                                                                                                '$CURPRep',
                                                                                                                '$CorreoElec')
     ";
-    $sql2 = "INSERT INTO directorio (id_registro,nombre_empresa, id_admin,representante, bd_empresa) VALUES ('', '$RazonSocial', '$id_admin ', '$NombreRep', '$nombreDB')";
+    @session_start();
+    $id_admin=$_SESSION['idusuarioR'];
+    $admin=$_SESSION['nombreR'];
+    $sql2 = "INSERT INTO directorio (id_registro,nombre_empresa, id_admin, admin,representante, bd_empresa) VALUES ('', '$RazonSocial', '$id_admin ', '$admin', '$NombreRep', '$nombreDB')";
 
 } else if($TipoPersona=="fisica"){
     $sql_tabla="CREATE TABLE `datos` (
@@ -102,6 +105,9 @@ if($TipoPersona=="moral"){
         `fecha` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
         ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
     ";
+    @session_start();
+    $id_admin=$_SESSION['idusuarioR'];
+    $admin=$_SESSION['nombreR'];
     $sql_datos="INSERT INTO datos (id,nombre, rfc,curp,direccion,representante,rfc_representante,curp_representante,correo) VALUES (
                                                                                                                '',
                                                                                                                '$Nombre',
@@ -113,7 +119,7 @@ if($TipoPersona=="moral"){
                                                                                                                '$CURPRep',
                                                                                                                '$CorreoElec')
     ";
-    $sql2 = "INSERT INTO directorio (id_registro,nombre_empresa, id_admin,representante, bd_empresa) VALUES ('', '$Nombre', '$id_admin ', '$NombreRep', '$nombreDB')";
+    $sql2 = "INSERT INTO directorio (id_registro,nombre_empresa, id_admin,admin,representante, bd_empresa) VALUES ('', '$Nombre', '$id_admin ', '$admin', '$NombreRep', '$nombreDB')";
 }
 else{
     die();

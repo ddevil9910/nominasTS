@@ -53,7 +53,7 @@ require_once  'partials/headers.php';
                             <button type="button" class="btn btn-primary" id="actualizar">Confirmar</button>
                           </div>
                         </div>
-                      </div>
+                      </div> 
                     </div>
 
                      <!-- Modal Eliminar -->
@@ -94,7 +94,7 @@ require_once  'partials/headers.php';
               </div>
             </div>
           </div>
-</div>
+</div> 
 
 
                      

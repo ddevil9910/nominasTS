@@ -83,13 +83,13 @@ function login(e){
                     Swal.fire({
                         icon: 'success',
                         title: 'Hola  '+ mensaje['usuario'],
-                        timer: 5000,
+                        timer: 2000,
                         showConfirmButton: false
                     });
 
                     setTimeout(function(){
                         window.location.href = 'index2.php';
-                    }, 5000);
+                    }, 2000);
                     
                     
                     //setTimeout("location.href='index2.php'", 800);

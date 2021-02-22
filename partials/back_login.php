@@ -17,7 +17,7 @@ if($accion=='login'){
         /*todo funciona bien*/
 
         //seleccionamos el usuariomen la base de datos
-        $stmt=$conn->prepare("SELECT id,usuario,password,id_tipo,estado FROM usuarios WHERE usuario = '$usuario'and password = md5('$contra')");
+        $stmt=$conn->prepare("SELECT id,usuario,nombre,password,id_tipo,estado FROM usuarios WHERE usuario = '$usuario'and password = md5('$contra')");
         //remplazamos el valor del signo de interrogacion con la variable  y la letra s indica que es string
         //$stmt->bind_param('s',$usuario);
         //ejecutamos la consulta 
@@ -25,7 +25,7 @@ if($accion=='login'){
         //logear el usuario
 
         //almacenamos los resultados obtenidos en variables
-        $stmt->bind_result($db_id, $db_usuario, $db_password, $db_tipo, $db_estado);
+        $stmt->bind_result($db_id, $db_usuario, $db_nombre, $db_password, $db_tipo, $db_estado);
         $stmt->fetch();
         //construimos la respuesta en arreglo para codificarla en objeto por js
        
@@ -34,11 +34,15 @@ if($accion=='login'){
            @session_start();
            $_SESSION['usuarioR']=$db_usuario;
            $_SESSION['estadoR']=$db_estado;
+           $_SESSION['idusuarioR']=$db_id;
+           $_SESSION['nombreR']=$db_nombre;
+           $_SESSION['selectR']='Sin seleccion actual';
            
             //creamos un array que codificamos en json para crear un objeto en js
             $respuesta = array(
                 'msm'=>'correcto',
                 'usuario'=> $usuario,
+               
                 
             );
             

@@ -3,6 +3,7 @@
 $usuario=$_POST['usuario'];
 $pass=$_POST['pwd'];
 $tipo=$_POST['tipo'];
+$nombre=$_POST['us_nom'];
 $id_tipo=0;
 $errores=1;
 
@@ -26,7 +27,7 @@ include ('conexion.php');
 
 
 
-$sql = "INSERT INTO usuarios (id,usuario, password,id_tipo,estado) VALUES ('', '$usuario', MD5('$pass'),'$id_tipo','Activo')";
+$sql = "INSERT INTO usuarios (id,usuario,nombre, password,id_tipo,estado) VALUES ('', '$usuario', '$nombre', MD5('$pass'),'$id_tipo','Activo')";
  mysqli_query($conn, $sql); 
  include ('cerrar_conexion.php');
 
