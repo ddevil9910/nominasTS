@@ -1,3 +1,10 @@
+<?php
+include_once 'partials/session.php';
+if((isset($_SESSION['usuarioR']))){
+    header("Location: index2.php");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="es">
   <head>
