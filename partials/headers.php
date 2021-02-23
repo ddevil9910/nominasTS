@@ -1,7 +1,8 @@
 <?php
 include_once 'partials/session.php';
+include_once 'recursos/utilities.php';
 if(!(isset($_SESSION['usuarioR']))){
-    header("Location: login.php");
+    redirectTo('login');;
 }
 ?>
 
@@ -74,6 +75,7 @@ if(!(isset($_SESSION['usuarioR']))){
 
                         </ul>
                     </div>
+                    <?php if ($_SESSION['tipoR']==1){ ?>
                     <!--Menu exclusivo del superusuario-->
                     <div class="menu_section">
                         <h3>Superusuario</h3>
@@ -92,7 +94,9 @@ if(!(isset($_SESSION['usuarioR']))){
                         </ul>
                     </div>
                     <!--/menu del superusuario-->
+                    <?php } ?>
 
+                    <?php if ($_SESSION['tipoR']==2){ ?>
                     <!--Menu del administrador-->
                     <div class="menu_section">
                         <h3>Administrador</h3>
@@ -118,6 +122,7 @@ if(!(isset($_SESSION['usuarioR']))){
                         </ul>
                     </div>
                     <!--/menu del administrador-->
+                    <?php } ?>
 
 
                 </div>

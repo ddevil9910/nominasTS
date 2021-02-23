@@ -36,6 +36,7 @@ if($accion=='login'){
            $_SESSION['estadoR']=$db_estado;
            $_SESSION['idusuarioR']=$db_id;
            $_SESSION['nombreR']=$db_nombre;
+           $_SESSION['tipoR']= $db_tipo;
            $_SESSION['selectR']='Sin seleccion actual';
            $_SESSION['selectidR']='Sin seleccion actual';
            $_SESSION['nombredbR']='Sin seleccion actual';

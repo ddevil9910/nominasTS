@@ -3,6 +3,39 @@ $page_title = "Alta - Usuario";
 require_once  'partials/headers.php';
 ?>
 
+<?php
+@session_start();
+if ($_SESSION['tipoR']!=1) { ?>
+    <!-- page content -->
+    <div class="right_col" role="main">
+        <div class="">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="x_panel">
+                        <div class="x_title">
+                            <h2>Acceso denegado</h2>
+
+                            <div class="clearfix"></div>
+                        </div>
+                        <h5>
+                            <P>Tu cuenta no tiene permisos para ver esta pagina.</P>
+                        </h5>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <!-- page content -->
+
+
+
+
+
+<?php }else{ ?>
+
 <!--contenido de la pagina-->
 
 <div class="right_col" role="main">
@@ -89,7 +122,7 @@ require_once  'partials/headers.php';
           </div>
 </div>
 
-
+<?php } ?>
 
 <!--/contenido de la pagina-->
 <?php
