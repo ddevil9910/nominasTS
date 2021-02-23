@@ -37,6 +37,8 @@ if($accion=='login'){
            $_SESSION['idusuarioR']=$db_id;
            $_SESSION['nombreR']=$db_nombre;
            $_SESSION['selectR']='Sin seleccion actual';
+           $_SESSION['selectidR']='Sin seleccion actual';
+           $_SESSION['nombredbR']='Sin seleccion actual';
            
             //creamos un array que codificamos en json para crear un objeto en js
             $respuesta = array(

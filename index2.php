@@ -4,11 +4,16 @@ require_once  'partials/headers.php';
 ?>
 <!--contenido de la pagina-->
 
+
+
 <div class="right_col" role="main">
           <div class="">
             <div class="page-title">
               <div class="title_left">
                 <h3>Mis Empresas</h3>
+              </div>
+              <div class="nav navbar-nav navbar-right">
+              <button class="btn btn-info" id="deselect" name="deselect">Salir de la empresa</button>
               </div>
             </div>
             <div class="clearfix"></div>
@@ -78,6 +83,14 @@ include_once 'partials/footers.php';
   $(document).ready(function(){
     $('#seleccionar').click(function(){
       seleccionar_usuario();
+    });
+  });
+</script>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('#deselect').click(function(){
+      deseleccionar_usuario();
     });
   });
 </script>

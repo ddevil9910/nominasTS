@@ -173,16 +173,39 @@ if(!(isset($_SESSION['usuarioR']))){
                         </li>
 
                         <ul class="nav navbar-nav navbar-right">
-                        <li class="">
-                            <a href="javascript:;" class="user-profile dropdown-toggle"  aria-expanded="false">
-                                <?php
+                            <li class="">
+                                <a href="javascript:;" class="user-profile dropdown-toggle"  aria-expanded="false">
+                                    <?php
 
-                                    echo $_SESSION['selectR'];
-                                ?>
+                                        echo $_SESSION['selectR'];
+                                    ?>
 
-                            </a>
-                            
-                        </li>
+                                </a>
+                                
+                            </li>
+                            <li class="">
+                                <a >
+                                    
+                                    <span class="glyphicon glyphicon-briefcase"></span>
+                                </a>
+                            </li>                      
+                            <li class="">
+                                <a href="javascript:;" class="user-profile dropdown-toggle"  aria-expanded="false">
+                                    <?php
+
+                                        echo $_SESSION['selectidR'];
+                                    ?>
+
+                                </a>
+                                
+                            </li>
+                            <li class="">
+                                <a >
+                                    
+                                    <span class="glyphicon glyphicon-bookmark"></span>
+                                </a>
+                            </li>
+                        </ul>
                     </ul>
                 </nav>
             </div>
