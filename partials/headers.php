@@ -41,7 +41,7 @@ if(!(isset($_SESSION['usuarioR']))){
         <div class="col-md-3 left_col">
             <div class="left_col scroll-view">
                 <div class="navbar nav_title" style="border: 0;">
-                    <a href="index2.html" class="site_title"><i class="fa fa-bank"></i> <span>Nomina general</span></a>
+                    <a href="index2.php" class="site_title"><i class="fa fa-bank"></i> <span>Nomina general</span></a>
                 </div>
 
                 <div class="clearfix"></div>
@@ -154,6 +154,12 @@ if(!(isset($_SESSION['usuarioR']))){
                     <div class="nav toggle">
                         <a id="menu_toggle"><i class="fa fa-bars"></i></a>
                     </div>
+
+
+
+
+
+
                     <ul class="nav navbar-nav navbar-right">
                         <li class="">
                             <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
@@ -177,40 +183,30 @@ if(!(isset($_SESSION['usuarioR']))){
                             </ul>
                         </li>
 
-                        <ul class="nav navbar-nav navbar-right">
-                            <li class="">
-                                <a href="javascript:;" class="user-profile dropdown-toggle"  aria-expanded="false">
+                        <?php if($_SESSION['tipoR']==2 ){ ?>
+                        <!--informacion para el administrador-->
+                            <li role="presentation">
+                                <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
+                                    <i class="fa fa-briefcase"></i>
                                     <?php
-
-                                        echo $_SESSION['selectR'];
+                                    echo $_SESSION['selectR'];
                                     ?>
-
                                 </a>
-                                
                             </li>
-                            <li class="">
-                                <a >
-                                    
-                                    <span class="glyphicon glyphicon-briefcase"></span>
-                                </a>
-                            </li>                      
-                            <li class="">
-                                <a href="javascript:;" class="user-profile dropdown-toggle"  aria-expanded="false">
+
+
+                            <li role="presentation">
+                                <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
+                                    <i class="fa fa-bookmark"></i>
+                                    ID:
                                     <?php
-
-                                        echo $_SESSION['selectidR'];
+                                    echo $_SESSION['selectidR'];
                                     ?>
+                                </a>
+                            </li>
+                        <!--/informacion para el administrador-->
+                        <?php }?>
 
-                                </a>
-                                
-                            </li>
-                            <li class="">
-                                <a >
-                                    
-                                    <span class="glyphicon glyphicon-bookmark"></span>
-                                </a>
-                            </li>
-                        </ul>
                     </ul>
                 </nav>
             </div>

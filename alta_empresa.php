@@ -46,7 +46,7 @@ require_once  'partials/headers.php';
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <input type="text" id="razon" name="razon" class="form-control col-md-7 col-xs-12"  >
                             <!--las alertas permiten verificar al usuario si se escriben el en formato correcto los campos-->
-                            <div id="alerta1" class="col-lg-8"></div>
+                            <div id="alerta1" class="col-lg-8"></div> <!--alerta-->
                         </div>
                       </div>
 

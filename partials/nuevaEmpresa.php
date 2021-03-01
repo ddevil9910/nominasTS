@@ -40,9 +40,10 @@ $db_password = $config['database']['password'];
 $sql_tabla = null;
 $sql_datos = null;
 $sql2 = null;
-/*pendiente: variables de sesion*/
-$id_admin=1;//////////////////////
-/*pendiente: variables de sesion*/
+@session_start();
+$id_admin=$_SESSION['idusuarioR'];
+$admin=$_SESSION['nombreR'];
+
 
 $errores=1;
 
@@ -86,9 +87,7 @@ if($TipoPersona=="moral"){
                                                                                                                '$CURPRep',
                                                                                                                '$CorreoElec')
     ";
-    @session_start();
-    $id_admin=$_SESSION['idusuarioR'];
-    $admin=$_SESSION['nombreR'];
+
     $sql2 = "INSERT INTO directorio (id_registro,nombre_empresa, id_admin, admin,representante, bd_empresa) VALUES ('', '$RazonSocial', '$id_admin ', '$admin', '$NombreRep', '$nombreDB')";
 
 } else if($TipoPersona=="fisica"){
@@ -105,9 +104,7 @@ if($TipoPersona=="moral"){
         `fecha` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
         ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
     ";
-    @session_start();
-    $id_admin=$_SESSION['idusuarioR'];
-    $admin=$_SESSION['nombreR'];
+
     $sql_datos="INSERT INTO datos (id,nombre, rfc,curp,direccion,representante,rfc_representante,curp_representante,correo) VALUES (
                                                                                                                '',
                                                                                                                '$Nombre',
@@ -126,8 +123,7 @@ else{
 }
 
 $sql_tabla2="CREATE TABLE `empleados` (
- `id_empleado` INT(5) NOT NULL AUTO_INCREMENT ,
- `numero_empleado` VARCHAR(15) NOT NULL ,
+ `id_empleado` INT(5) NOT NULL AUTO_INCREMENT , 
  `nombre_empleado` VARCHAR(60) NOT NULL ,
  `rfc_empleado` VARCHAR(13) NOT NULL ,
  `curp_empleado` VARCHAR(18) NOT NULL ,

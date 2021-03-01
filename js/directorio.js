@@ -1,3 +1,7 @@
+/* jshint browser: true */
+/* jshint node: true */
+/* jshint esversion: 6 */
+
 console.log("conectado a js");
 
 
@@ -16,9 +20,11 @@ function seleccionar_usuario(){
     console.log("diste un clic");
     var emp=$('#nr').val();
     var idemp=$('#idnr').val();
+    var dbemp=$('#bder').val();
     var datos = new FormData();
     datos.append('empre',emp);
     datos.append('idempre',idemp);
+    datos.append('bdempre',dbemp);
 
     
 
@@ -44,7 +50,7 @@ function seleccionar_usuario(){
 
             setTimeout(function(){
                 window.location.href = 'index2.php';
-            }, 500);
+            }, 2000);
             
 
 
@@ -67,9 +73,11 @@ function deseleccionar_usuario(){
     console.log("diste un clic");
     var emp='Sin seleccion actual';
     var idemp='Sin seleccion actual';
+    var bdemp='Sin seleccion actual';
     var datos = new FormData();
     datos.append('empre',emp);
     datos.append('idempre',idemp);
+    datos.append('bdempre',bdemp);
 
     
 
@@ -95,7 +103,7 @@ function deseleccionar_usuario(){
 
             setTimeout(function(){
                 window.location.href = 'index2.php';
-            }, 500);
+            }, 2000);
             
 
 

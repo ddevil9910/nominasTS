@@ -8,13 +8,18 @@ require_once  'partials/headers.php';
 
 <div class="right_col" role="main">
           <div class="">
+
             <div class="page-title">
               <div class="title_left">
                 <h3>Mis Empresas</h3>
               </div>
-              <div class="nav navbar-nav navbar-right">
-              <button class="btn btn-info" id="deselect" name="deselect">Salir de la empresa</button>
-              </div>
+
+                <?php if($_SESSION['tipoR']==2 && is_numeric($_SESSION['selectidR'])){ ?>
+                    <div class=" pull-right">
+                        <button class="btn btn-info" id="deselect" name="deselect">Salir de la empresa</button>
+                    </div>
+                <?php }  ?>
+
             </div>
             <div class="clearfix"></div>
             <div class="row">
@@ -25,7 +30,7 @@ require_once  'partials/headers.php';
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
-                  <div id="tabla"></div>
+                  <div id="tabla" class="table-responsive"></div>
                   
 
                    

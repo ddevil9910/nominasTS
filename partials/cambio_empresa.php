@@ -2,12 +2,14 @@
 
 $empresa=$_POST['empre'];
 $idempresa=$_POST['idempre'];
+$bdempresa=$_POST['bdempre'];
 $errores=0;
 
 
 @session_start();
     $_SESSION['selectR']=$empresa;
     $_SESSION['selectidR']=$idempresa;
+    $_SESSION['selectbdR']=$bdempresa;
     $errores=0;
 
 
