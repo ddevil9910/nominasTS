@@ -2,8 +2,9 @@
 
     <div class="row">
         <div class="col-sm-12">
-            <table class="table table-hover table-condensed table-bordered">
-                <tr>
+            <table class="table table-striped table-bordered dataTable no-footer" role="grid" aria-describedby="datatable_info">
+                <thead>
+                <tr  role="row" class="odd">
                     <td>id</td>
                     <td>Usuario</td>
                     <td>Tipo</td>
@@ -11,6 +12,10 @@
                     <td>Editar</td>
                     <td>Eliminar</td>
                 </tr>
+                </thead>
+
+
+
                 <?php
                     include ('../partials/conexion.php');
                     $sql="SELECT id, usuario, id_tipo, estado from usuarios";

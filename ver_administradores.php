@@ -20,7 +20,7 @@ require_once  'partials/headers.php';
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
-                  <div id="tabla"></div>
+                  <div id="tabla" class="table-responsive"></div>
                   
 
                     <!-- Modal Editar -->
