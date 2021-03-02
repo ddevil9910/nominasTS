@@ -104,6 +104,7 @@ if(!(isset($_SESSION['usuarioR']))){
                             <li><a><i class="fa fa-user"></i> Empleados <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
                                     <li><a href="alta_trabajador.php">Alta de trabajador</a></li>
+                                    <li><a href="ver_empleados.php">Ver empleados</a></li>
                                 </ul>
                             </li>
                             <li><a><i class="fa fa-building"></i> Empresas <span class="fa fa-chevron-down"></span></a>
