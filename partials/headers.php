@@ -116,7 +116,7 @@ if(!(isset($_SESSION['usuarioR']))){
                             </li>
                             <li><a><i class="fa fa-money"></i> Nómina <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
-                                    <li><a href="configuracion_nomina.php">Configuración de Nómina</a></li>
+                                    <li><a href="percepciones.php">Configuración de Percepciones</a></li>
                                     <li><a href="generar_nomina.php">Generar de Nómina</a></li>
 
                                 </ul>
