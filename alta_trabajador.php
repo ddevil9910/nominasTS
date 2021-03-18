@@ -209,7 +209,7 @@ if ( ($_SESSION['tipoR']==2) && !(is_numeric($_SESSION['selectidR'])) ) { ?>
                                     <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
                                         <button class="btn btn-primary" type="button">Cancelar</button>
                                         <button class="btn btn-primary" type="reset">Limpiar</button>
-                                        <button type="submit" class="btn btn-success" id="btnGuardar" name="btnGuardar" disabled>Guardar</button>
+                                        <button type="submit" class="btn btn-success" id="btnGuardar" name="btnGuardar">Guardar</button>
                                     </div>
                                 </div>
 
