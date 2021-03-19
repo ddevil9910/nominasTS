@@ -19,6 +19,7 @@
                 <td>Dirección</td>
                 <td>Tipo de empleado</td>
                 <td>Correo electronico</td>
+                <td>Periodo de pago</td>
 
             </tr>
             </thead>
@@ -32,7 +33,7 @@
             $sql="SELECT * from empleados";
             $result=mysqli_query($conn2, $sql);
             while($ver=mysqli_fetch_row($result)){
-                $datos=$ver[0]."||".$ver[1]."||".$ver[2]."||".$ver[3]."||".$ver[4]."||".$ver[5]."||".$ver[6]."||".$ver[7]."||".$ver[8]."||".$ver[9]."||".$ver[10]."||".$ver[11]."||".$ver[12]."||".$ver[13];
+                $datos=$ver[0]."||".$ver[1]."||".$ver[2]."||".$ver[3]."||".$ver[4]."||".$ver[5]."||".$ver[6]."||".$ver[7]."||".$ver[8]."||".$ver[9]."||".$ver[10]."||".$ver[11]."||".$ver[12]."||".$ver[13]."||".$ver[14];
 
                 ?>
                 <tr>
@@ -56,6 +57,7 @@
                     <td><?php   echo $ver[11]?></td>
                     <td><?php   echo $ver[12]?></td>
                     <td><?php   echo $ver[13]?></td>
+                    <td><?php   echo $ver[14]?></td>
 
 
 

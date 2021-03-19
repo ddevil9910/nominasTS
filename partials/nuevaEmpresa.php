@@ -137,6 +137,7 @@ $sql_tabla2="CREATE TABLE `empleados` (
  `direccion_empleado` VARCHAR(100) NOT NULL ,
  `tipo_empleado` VARCHAR(15) NOT NULL , 
  `correo_empleado` VARCHAR(50) NOT NULL ,
+ `periodo_pago` VARCHAR(11) NOT NULL,
  PRIMARY KEY (`id_empleado`)) ENGINE = InnoDB; 
 ";
 $sql_tabla3="CREATE TABLE `archivos` (

@@ -174,7 +174,7 @@ if ( ($_SESSION['tipoR']==2) && !(is_numeric($_SESSION['selectidR'])) ) { ?>
                                     </div>
                                 </div>
 
-<!--                                tipo empleado-->
+                                <!--tipo empleado-->
                                 <div class="form-group">
                                     <label class="control-label col-md-3 col-sm-3 col-xs-12">Tipo de Empleado <span class="required">*</span>
                                     </label>
@@ -187,7 +187,20 @@ if ( ($_SESSION['tipoR']==2) && !(is_numeric($_SESSION['selectidR'])) ) { ?>
                                     </div>
                                 </div>
 
-<!--                                Correo electronico-->
+                                <!--periodo de pago-->
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Periodo de pago <span class="required">*</span>
+                                    </label>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <select id="periodo" class="form-control" name="periodo">
+                                            <option value="semanal">Semanal</option>
+                                            <option value="quincenal">Quincenal</option>
+                                            <option value="mensual">Mensual</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!--Correo electronico-->
                                 <div class="form-group">
                                     <label class="control-label col-md-3 col-sm-3 col-xs-12">Correo Electronico <span class="required">*</span>
                                     </label>
@@ -204,12 +217,14 @@ if ( ($_SESSION['tipoR']==2) && !(is_numeric($_SESSION['selectidR'])) ) { ?>
 
 
 
+
+
                                 <div class="ln_solid"></div>
                                 <div class="form-group">
                                     <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
                                         <button class="btn btn-primary" type="button">Cancelar</button>
                                         <button class="btn btn-primary" type="reset">Limpiar</button>
-                                        <button type="submit" class="btn btn-success" id="btnGuardar" name="btnGuardar">Guardar</button>
+                                        <button type="submit" class="btn btn-success" id="btnGuardar" name="btnGuardar" disabled>Guardar</button>
                                     </div>
                                 </div>
 

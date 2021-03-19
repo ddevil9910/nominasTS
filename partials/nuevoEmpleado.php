@@ -14,7 +14,7 @@ $SalarioDI= !empty($_POST['salariodi']) ? $_POST['salariodi'] : '';
 $Direccion= !empty($_POST['direccion']) ? $_POST['direccion'] : '';
 $TipoEmpleado= !empty($_POST['tipoemp']) ? $_POST['tipoemp'] : '';
 $CorreoElec= !empty($_POST['email']) ? $_POST['email'] : '';
-
+$PeriodoPago = !empty($_POST['periodo']) ? $_POST['periodo'] : '';
 //Evitar un acceso directo por URL o un campo vacio enviado por un inspector de codigo
 if(empty($Nombre) || empty($RFCE) || empty($CURP) || empty($Direccion) || empty($CorreoElec) || empty($TipoEmpleado)) {
     die('Direct access not permitted');
@@ -37,7 +37,7 @@ $baseActual=$_SESSION['selectbdR'];
 
 $conn = mysqli_connect($host, $db_username, $db_password, $baseActual);
 
-$sql_datos="INSERT INTO `empleados` (`id_empleado`, `nombre_empleado`, `rfc_empleado`, `curp_empleado`, `nss_empleado`, `fecha_ingr`, `fecha_baja`, `puesto`, `departamento`, `salario_diario`, `salario_inte`, `direccion_empleado`, `tipo_empleado`, `correo_empleado`) VALUES (
+$sql_datos="INSERT INTO `empleados` (`id_empleado`, `nombre_empleado`, `rfc_empleado`, `curp_empleado`, `nss_empleado`, `fecha_ingr`, `fecha_baja`, `puesto`, `departamento`, `salario_diario`, `salario_inte`, `direccion_empleado`, `tipo_empleado`, `correo_empleado`, periodo_pago) VALUES (
  '',
  '$Nombre',
  '$RFCE',
@@ -51,7 +51,8 @@ $sql_datos="INSERT INTO `empleados` (`id_empleado`, `nombre_empleado`, `rfc_empl
  '$SalarioDI',
  '$Direccion',
  '$TipoEmpleado',
- '$CorreoElec')";
+ '$CorreoElec',
+ '$PeriodoPago')";
 
 
 
