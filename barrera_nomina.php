@@ -22,24 +22,14 @@ require_once  'partials/headers.php';
                   <div class="x_content">
                     <br />     
 
-<<<<<<< HEAD
                     <form id="variableGet" name="variableGet" data-parsley-validate class="form-horizontal form-label-left">
-=======
-                    <form id="formBarerraPeriodo" data-parsley-validate class="form-horizontal form-label-left">
->>>>>>> parent of 81ba6f9 (cambios barrera)
                       <div class="form-group">
                         <label class="control-label col-md-4 col-sm-4 col-xs-4">Seleccione el periodo </label>
                                     <div class="col-md-3 col-sm-3 col-xs-3">
                                         <select id="barerraperiodo" class="form-control" name="barerraperiodo">
-<<<<<<< HEAD
                                             <option value="Semanal">Semanal </option>
                                             <option value="Quincenal">Quincenal </option>
                                             <option value="Mensual">Mensual </option>
-=======
-                                            <option value="permanente">Semanal </option>
-                                            <option value="a_prueba">Quincenal </option>
-                                            <option value="eventual">Mensual </option>
->>>>>>> parent of 81ba6f9 (cambios barrera)
                                         </select>
                                     </div>
 
